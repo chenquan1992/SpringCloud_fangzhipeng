@@ -2,4 +2,4 @@
 server:
   port: 8762
 
-foo: foo version 1    #自定义变量
+foo: foo version 1    #自定义变量111
