@@ -12,6 +12,7 @@ public class HiService {
 
     @Autowired
     EurekaClientFeign eurekaClientFeign;
+
     public String sayHi(String name){
         return  eurekaClientFeign.sayHiFromClientEureka(name);
     }

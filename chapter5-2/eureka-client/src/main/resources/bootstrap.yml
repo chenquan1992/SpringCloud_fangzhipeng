@@ -6,9 +6,9 @@ server:
   port: 8762
 spring:
   application:
-    name: eureka-client
+    name: eureka-client # 1、配置程序名
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://localhost:8761/eureka/   # 2、服务注册地址

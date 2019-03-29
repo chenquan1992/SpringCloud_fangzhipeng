@@ -9,7 +9,7 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 @SpringBootApplication
 @EnableEurekaClient
 @EnableHystrix
-@EnableHystrixDashboard
+@EnableHystrixDashboard//开启Hystrix Dashboard 的功能
 public class EurekaRibbonClientApplication {
 
 	public static void main(String[] args) {

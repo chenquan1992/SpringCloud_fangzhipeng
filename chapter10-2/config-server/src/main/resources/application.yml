@@ -18,12 +18,12 @@ server:
 spring:
   cloud:
     config:
-      server:
+      server:    #这个配置指明仓库的地址，可以是git上的，也可以是本地的，本地的参照上面的
         git:
-          uri: https://github.com/forezp/SpringcloudConfig
-          searchPaths: respo
+          uri: https://github.com/chenquan1992/SpringCloudConfig
+          searchPaths: src/shared   #serachPaths 为搜索远程仓库的文件夹地址，
           username:
           password:
-      label: master
+      label: master  #label 为git 库的分支名
   application:
     name: config-server

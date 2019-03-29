@@ -1,9 +1,9 @@
 stores:
   ribbon:
-    listOfServers: example.com,google.com
+    listOfServers: example.com,google.com  #通过 stores.ribbon.listOfServers 来配 这些服务实例的 Url,就是ribbon以后请求的地址
 
 ribbon:
   eureka:
-   enabled: false
+   enabled: false  #通过配 ribbon.eureka.enable false来禁止调用 Eureka Client 获取注册列表
 server:
   port: 8769

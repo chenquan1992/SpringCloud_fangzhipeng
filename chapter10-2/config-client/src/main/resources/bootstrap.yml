@@ -3,9 +3,9 @@ spring:
     name: config-client
   cloud:
     config:
-      uri: http://localhost:8769
+      uri: http://localhost:8769   #去服务端获取配置文件，服务端在指明说去哪里获取配置文件
       fail-fast: true
   profiles:
     active: dev
-server:
+server:    #如果使用了远程的，这个就不使用了
   port: 8762

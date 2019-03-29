@@ -7,7 +7,7 @@ spring:
       fail-fast: true
       discovery:
         enabled: true
-        serviceId: config-server
+        serviceId: config-server   #向 Service Id 为config-server 的配置文件读取配置，由于已经注册要eureka，所以可以使用serviceId
 
 
   profiles:

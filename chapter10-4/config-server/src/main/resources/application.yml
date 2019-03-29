@@ -20,8 +20,8 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/forezp/SpringcloudConfig
-          searchPaths: respo
+          uri: https://github.com/chenquan1992/SpringCloudConfig
+          searchPaths: src/shared   #serachPaths 为搜索远程仓库的文件夹地址，
           username: 
           password:
       label: master

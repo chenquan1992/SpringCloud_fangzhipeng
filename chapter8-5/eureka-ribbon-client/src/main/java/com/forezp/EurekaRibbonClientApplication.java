@@ -7,7 +7,7 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 
 @SpringBootApplication
 @EnableEurekaClient
-@EnableHystrix
+@EnableHystrix //注解开启Hystrix 熔断器功能
 public class EurekaRibbonClientApplication {
 
 	public static void main(String[] args) {

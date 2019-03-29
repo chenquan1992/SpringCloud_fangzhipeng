@@ -16,7 +16,7 @@ spring:
     config:
       server:
         native:
-          search-locations: classpath:/shared
+          search-locations: classpath:/shared     # Spring cloud 的配置文件所在地，供其他服务请求获取配置文件，然后那个里面还有 application.yml 这个文件，就是其他配置文件的共有配置文件
   profiles:
      active: native
   application:

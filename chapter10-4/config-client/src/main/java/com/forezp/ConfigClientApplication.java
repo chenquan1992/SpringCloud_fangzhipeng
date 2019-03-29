@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 @EnableEurekaClient
-@RefreshScope
+@RefreshScope    //在要更新配置的主类上加@RefreshScope 注解，只有加上了该注解，才会在不重启服务的情况下更新配置
 public class ConfigClientApplication {
 
 	public static void main(String[] args) {

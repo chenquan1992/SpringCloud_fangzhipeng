@@ -4,9 +4,9 @@ spring:
   cloud:
     config:
       uri: http://localhost:8769
-      fail-fast: true
+      fail-fast: true   # 如果读取配置文件不成功，实行快速失败的策略
   profiles:
-    active: pro
+    active: pro    #这个是请求 http://localhost:8769 这个地址下的 Spring cloud 配置文件的下的 pro 结束的配置文件，这个要用 bootstrap 的，bootstrap 优先于 application
 
 #  datasource:
 #    driver-class-name: com.mysql.jdbc.Driver

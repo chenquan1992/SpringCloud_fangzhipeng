@@ -14,7 +14,7 @@ public class ConfigClientApplication {
 		SpringApplication.run(ConfigClientApplication.class, args);
 	}
 
-	@Value("${foo}")
+	@Value("${foo}") //这个是Spring cloud的远程配置文件获取到的foo的属性值
 	String foo;
 	@RequestMapping(value = "/foo")
 	public String hi(){

@@ -14,9 +14,16 @@ import static org.springframework.cloud.netflix.zuul.filters.support.FilterConst
  * Created by fangzhipeng on 2017/6/26.
  */
 @Component
-public class MyFilter extends ZuulFilter {
+public class MyFilter extends ZuulFilter {//zuul实现过滤器只需要继承 ZuulFilter ，井实现 Zuu!Filter 中的抽象方法
 
     private static Logger log = LoggerFactory.getLogger(MyFilter.class);
+
+    /**
+     pre：可以在请求被路由之前调用
+     route：在路由请求时候被调用
+     post：在route和error过滤器之后被调用
+     error：处理请求时发生错误时被调用
+     */
     @Override
     public String filterType() {
         return PRE_TYPE;
@@ -24,11 +31,11 @@ public class MyFilter extends ZuulFilter {
 
     @Override
     public int filterOrder() {
-        return 0;
+        return 0;//值越小，越早执行该过滤器
     }
 
     @Override
-    public boolean shouldFilter() {
+    public boolean shouldFilter() {//表示该过滤器是否过滤逻辑，如果为 true ，则执行 run（）方法
         return true;
     }
 

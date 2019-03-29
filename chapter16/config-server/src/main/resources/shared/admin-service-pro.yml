@@ -2,7 +2,7 @@ server:
   port: 9998
 security:
   user:
-    name: admin
+    name: admin  # 这里的用户名密码就是打开 http://localhost:9998/ 这个网址需要用到的用户名密码
     password: 123456
 management:
   security:
@@ -20,7 +20,7 @@ spring:
 eureka:
   instance:
     metadata-map:
-      user.name: admin
+      user.name: admin    # 这里的用户名密码就是打开 http://localhost:9998/ 这个网址需要用到的用户名密码
       user.password: 123456
 
 logging:

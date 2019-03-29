@@ -9,9 +9,9 @@ spring:
     name: service-zuul
 zuul:
   routes:
-    hiapi:
-      path: /hiapi/**
-      serviceId: eureka-client
+    hiapi:     #随便填的，一种标识
+      path: /hiapi/**    # 请求这个路径的时候，zuul会自动将请求路由， Zuul 在路由转发也是有做了负载均衡的
+      serviceId: eureka-client  # 到名字为 eureka-client 的微服务中
 #      url: http://localhost:8762  #这样写不会做负载均衡
 #      serviceId: hiapi-v1
     ribbonapi:
@@ -29,3 +29,5 @@ zuul:
 #hiapi-v1:
 #  ribbon:
 #    listOfServers: http://localhost:8762,http://localhost:8763
+
+#需求都请求来到网关zuul，再由zuul路由到其他的微服务，其实在api接口中就已经知道要请求到哪个微服务了

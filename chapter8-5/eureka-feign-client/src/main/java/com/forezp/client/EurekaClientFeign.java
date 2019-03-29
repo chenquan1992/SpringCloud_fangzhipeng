@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 /**
  * Created by fangzhipeng on 2017/6/21.
  */
-@FeignClient(value = "eureka-client",configuration = FeignConfig.class,fallback = HiHystrix.class)
+@FeignClient(value = "eureka-client",configuration = FeignConfig.class,fallback = HiHystrix.class) //启用熔断器，需要另外写一个类实现这个接口，重写熔断调用的方法
 public interface EurekaClientFeign {
     @GetMapping(value = "/hi")
     String sayHiFromClientEureka(@RequestParam(value = "name") String name);

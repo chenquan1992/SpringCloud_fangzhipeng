@@ -4,7 +4,7 @@ security.basic.enabled: false
 turbine:
   aggregator:
     clusterConfig: default
-  appConfig: user-service , blog-service
+  appConfig: user-service , blog-service         # Hystrix Dashboard 监控 Hystrix 熔断器状况，聚合了 user-service、blog-service 这两个微服务去观察
   clusterNameExpression: new String("default")
 
 management:

@@ -6,7 +6,7 @@ import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.cloud.netflix.turbine.EnableTurbine;
 
-
+//Turbine 聚合监控——微服务
 @SpringBootApplication
 @EnableTurbine
 @EnableHystrixDashboard

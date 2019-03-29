@@ -3,10 +3,10 @@ server:
 
 eureka:
   instance:
-    hostname: localhost
+    hostname: localhost  #eureka注册的地址
   client:
-    registerWithEureka: false
-    fetchRegistry: false
+    registerWithEureka: false  #1、防止自己注册自己
+    fetchRegistry: false  #1、防止自己注册自己
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/   #这不就是注册到自己了嘛
 

@@ -15,15 +15,15 @@ import java.io.InputStream;
  * Created by fangzhipeng on 2017/6/28.
  */
 @Component
-class MyFallbackProvider  implements ZuulFallbackProvider {
+class MyFallbackProvider  implements ZuulFallbackProvider {//Zuul 实现熔断功能需要实现 ZuulFallbackProvider 接口
     @Override
-    public String getRoute() {
+    public String getRoute() {//指定熔断功能应用于哪些路由的服务
 //        return "eureka-client";
-        return "*";
+        return "*";   //这个指明熔断功能应用于所有的服务吧
     }
 
     @Override
-    public ClientHttpResponse fallbackResponse() {
+    public ClientHttpResponse fallbackResponse() {//为进入熔断功能时执行的逻辑
         return new ClientHttpResponse() {
             @Override
             public HttpStatus getStatusCode() throws IOException {
